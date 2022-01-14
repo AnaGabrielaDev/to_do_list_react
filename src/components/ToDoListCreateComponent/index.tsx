@@ -1,10 +1,12 @@
+import { FormEvent } from 'react';
+
 function ToDoListCreateComponent() {
-  function handleSubmit(event: Event) {
+  function handleSubmit(event: FormEvent) {
     event.preventDefault();
     console.log('submit');
   }
   return (
-    <form onSubmit={(event) => handleSubmite()}>
+    <form onSubmit={handleSubmit}>
       <input type="text" name="" placeholder="name" />
       <input type="submit" value="Create" />
     </form>
